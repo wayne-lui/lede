@@ -56,7 +56,7 @@ jobs:
 
       - name: Make download
         run: |
-        	rm -f ./.config*
+          rm -f ./.config*
           touch ./.config
           cat >> .config <<EOF
           #

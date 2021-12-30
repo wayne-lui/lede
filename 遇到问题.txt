@@ -1,0 +1,13 @@
+1 Git Clone错误解决：GnuTLS recv error (-110): The TLS connection was non-properly terminated. 
+     解决：将源 https换成http就可以了 或者 sudo apt install apt-transport-https
+
+2 编译进行到 ” ./scripts/feeds install -a “这一步后，出现提示 
+WARNING: Makefile 'package/lean/amule/Makefile' has a dependency on 'libpng', which does not exist
+WARNING: Makefile 'package/lean/amule/Makefile' has a dependency on 'libupnp', which does not exist
+WARNING: Makefile 'package/lean/amule/Makefile' has a build dependency on 'libgd', which does not exist
+WARNING: Makefile 'package/lean/antileech/Makefile' has a build dependency on 'libgd', which does not exist
+WARNING: Makefile 'package/lean/autocore/Makefile' has a dependency on 'bc', which does not exist
+WARNING: Makefile 'package/lean/autocore/Makefile' has a dependency on 'lm-sensors', which does not exist
+WARNING: Makefile 'package/lean/automount/Makefile' has a dependency on 'kmod-fs-exfat', which does not exist
+WARNING: Makefile 'package/lean/automount/Makefile' has a dependency on 'ntfs-3g', which does not exist
+   解决: 这是因为先安装本地的插件，再安装feeds的插件导致的warning，执行第二次install就会消失
